@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign In</title>
+    <link rel="icon" type="image/x-icon" href="favicon-32x32.png" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      video {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        width: 100%;
+        height: auto;
+        transform: translate(-50%, -50%);
+        z-index: -1;
+        min-width: 100%;
+        min-height: 100%;
+        object-fit: cover;
+      }
+      @media (max-aspect-ratio: 16/9) {
+        video {
+          width: auto;
+          height: 100%;
+        }
+      }
+      @media (min-aspect-ratio: 16/9) {
+        video {
+          width: 100%;
+          height: auto;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Background Video -->
+    <video autoplay loop muted>
+      <source src="space for bg.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+
+    <!-- Content -->
+    <div
+      class="flex min-h-screen items-center justify-center px-2 py-1 lg:px-8 text-white"
+    >
+      <div class="w-full max-w-md">
+        <div class="text-center">
+          <img class="mx-auto h-60 w-auto" src="orbitX.png" alt="OrbitX Logo" />
+          <h2 class="mt-4 text-3xl font-bold">Sign in to your account</h2>
+          <p class="mt-2 text-sm text-gray-300">
+            Or
+            <a href="#" class="text-indigo-400 hover:text-indigo-300">
+              create a new account
+            </a>
+          </p>
+        </div>
+
+        <div class="mt-8">
+          <form class="space-y-6" action="#" method="POST">
+            <div>
+              <label for="email" class="block text-sm font-medium text-gray-200"
+                >Email address</label
+              >
+              <div class="mt-1">
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  autocomplete="email"
+                  required
+                  class="w-full rounded-md border-gray-300 bg-gray-100 px-4 py-2 text-gray-900 placeholder-gray-500 focus:ring-indigo-500 focus:border-indigo-500"
+                />
+              </div>
+            </div>
+
+            <div>
+              <div class="flex justify-between">
+                <label
+                  for="password"
+                  class="block text-sm font-medium text-gray-200"
+                  >Password</label
+                >
+                <a
+                  href="#"
+                  class="text-sm text-indigo-400 hover:text-indigo-300"
+                >
+                  Forgot password?
+                </a>
+              </div>
+              <div class="mt-1">
+                <input
+                  type="password"
+                  id="password"
+                  name="password"
+                  autocomplete="current-password"
+                  required
+                  class="w-full rounded-md border-gray-300 bg-gray-100 px-4 py-2 text-gray-900 placeholder-gray-500 focus:ring-indigo-500 focus:border-indigo-500"
+                />
+              </div>
+            </div>
+
+            <div>
+              <button
+                type="submit"
+                class="w-full rounded-md bg-indigo-600 px-4 py-2 text-white font-medium hover:bg-indigo-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
+              >
+                Sign In
+              </button>
+            </div>
+          </form>
+
+          <p class="mt-6 text-center text-sm">
+            Not a member?
+            <a
+              href="#"
+              class="font-medium text-indigo-400 hover:text-indigo-300"
+              >Start a 14-day free trial</a
+            >
+          </p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
